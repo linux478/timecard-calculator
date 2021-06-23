@@ -47,4 +47,9 @@ minutes := time[1] * 60 + minutes
 minutes := time[2] + minutes
 hour := floor(minutes / 60)
 minutes := ceil(mod(minutes,60))
-Msgbox, Clock out time is %hour%:%minutes%
+if (minutes < 10)
+{
+  Msgbox, Clock out time is %hour%:0%minutes%
+} else {
+  Msgbox, Clock out time is %hour%:%minutes%
+}
